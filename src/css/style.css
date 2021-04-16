@@ -19,7 +19,7 @@ body {
 
 .slides-container {
   width: 90%;
-  max-width: 580px;
+  max-width: 36rem;
   /* min-height because the content is position : absolute =  like there's no content */
   min-height: 100vh;
   margin: 0 auto;
@@ -39,7 +39,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   width: 95%;
-  max-width: 400px;
+  max-width: 25rem;
   margin: 0 auto;
   position: relative;
   padding-top: 2rem;
@@ -75,7 +75,7 @@ body {
   left: 50%;
   transform: translate(-50%, -55%);
   width: 16vw;
-  max-width: 70px;
+  max-width: 4.5rem;
   z-index: -20;
 }
 .quotes-img img {
@@ -106,7 +106,7 @@ body {
     background-size: 42%;
   }
   .slides-container {
-    max-width: 1600px;
+    max-width: 100rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -174,7 +174,7 @@ body {
   .quotes-img {
     left: 24%;
     width: 20vw;
-    max-width: 120px;
+    max-width: 7.5rem;
   }
 
   .writer-info {
