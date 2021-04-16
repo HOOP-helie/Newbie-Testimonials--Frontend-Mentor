@@ -3,19 +3,18 @@
   --color-secondary: #babacf;
 }
 
+::selection {
+  color: white;
+  background-color: rgba(132, 102, 207, 0.5);
+}
+
 body {
   font-family: "Inter", sans-serif;
   color: var(--color-primary);
-}
-
-.container {
   background-image: url("../images/pattern-curve.svg");
   background-repeat: no-repeat;
   background-position: bottom left;
   background-size: 80%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
 }
 
 .slides-container {
@@ -24,14 +23,13 @@ body {
   /* min-height because the content is position : absolute =  like there's no content */
   min-height: 100vh;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
   position: relative;
   overflow-x: hidden;
 }
 
 .slide {
   position: absolute;
-  width: 100%;
   text-align: center;
   transition: all 0.6s;
 }
@@ -68,8 +66,7 @@ body {
   transition: background-color 0.3s;
 }
 
-.slider-control-btn img {
-  width: 10px;
+.slider-control-btn > div {
   transition: all 0.2s;
 }
 
@@ -81,15 +78,9 @@ body {
   max-width: 70px;
   z-index: -20;
 }
-
 .quotes-img img {
   width: 100%;
 }
-
-.testimonial-container {
-  position: relative;
-}
-
 .testimonial {
   position: relative;
   font-size: 1.1rem;
@@ -110,29 +101,38 @@ body {
 }
 
 @media (min-width: 60rem) {
+  body {
+    overflow: hidden;
+    background-size: 42%;
+  }
   .slides-container {
     max-width: 1600px;
     width: 100%;
     display: flex;
     align-items: center;
+    padding-top: 0;
   }
   .slide {
     display: flex;
     flex-direction: row-reverse;
   }
   .writer-profile-pic {
-    width: 50%;
+    width: 48%;
     max-width: none;
     margin-bottom: 0;
-    padding-top: 4%;
+    /* the padding will allow the background to grow with the profile pic */
+    padding-top: 7%;
     transform: translate(-10%);
   }
   .writer-profile-pic > img {
-    width: 75%;
+    width: 78%;
+    position: relative;
+    top: -40px;
+    left: -15px;
   }
 
   .testimonial-container {
-    width: 50%;
+    width: 52%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -141,18 +141,27 @@ body {
 
   .testimonial {
     font-size: 2rem;
-    margin: 0;
-    transform: translate(25%);
+    margin: 1rem 0;
+    transform: translate(24%);
   }
 
   .slider-control-btn {
     padding: 1rem;
-    left: 30%;
-    width: 70px;
+    bottom: 35px;
+    left: 25%;
+    width: 80px;
   }
   .slider-control-btn:hover {
     background-color: rgb(248, 248, 248);
     transition: background-color 0.3s;
+  }
+
+  .slider-control-btn > div {
+    padding: 0.2rem 0.3rem;
+  }
+  .previous-icon,
+  .next-icon {
+    padding: 0 0.3rem;
   }
 
   .previous-icon:hover,
@@ -163,13 +172,13 @@ body {
   }
 
   .quotes-img {
-    left: 25%;
+    left: 24%;
     width: 20vw;
     max-width: 120px;
   }
 
   .writer-info {
-    transform: translate(23%);
+    transform: translate(22%);
     display: flex;
     align-items: center;
     margin-top: 2rem;
@@ -177,19 +186,6 @@ body {
   }
 
   .writer-name {
-    margin: 0 10px 0 0;
-  }
-
-  .container {
-    /* background-image: url("../images/pattern-curve.svg");
-    background-repeat: no-repeat;
-    background-position: bottom left; */
-    background-size: 40%;
-    /* min-height: 100vh;
-    display: flex;
-    align-items: center; */
+    margin: 0px 10px 0 0;
   }
 }
-
-/* Ajouter padding pour le bouton */
-/* Pixel perfect */
